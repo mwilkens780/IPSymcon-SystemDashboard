@@ -1,0 +1,12 @@
+{
+    "id": "{87CB0B12-8DE6-4881-9A83-D56BEDAE1480}",
+    "name": "System Dashboard",
+    "type": 3,
+    "vendor": "Martin Wilkens",
+    "aliases": [],
+    "dependencies": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "SYD"
+}

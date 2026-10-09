@@ -1,0 +1,64 @@
+{
+  "elements": [
+    {
+      "type": "List",
+      "name": "tiles",
+      "caption": "Kacheln",
+      "rowCount": 14,
+      "add": true,
+      "delete": true,
+      "columns": [
+        { "caption": "Name", "name": "name", "width": "170px", "add": "", "edit": { "type": "ValidationTextBox" } },
+        { "caption": "Variable/Instanz", "name": "variable", "width": "190px", "add": 0, "edit": { "type": "SelectVariable" } },
+        { "caption": "Skript (nur Auslöser)", "name": "script", "width": "170px", "add": 0, "edit": { "type": "SelectScript" } },
+        {
+          "caption": "Typ",
+          "name": "type",
+          "width": "150px",
+          "add": "value",
+          "edit": {
+            "type": "Select",
+            "options": [
+              { "caption": "Wert (+ Diagramm)", "value": "value" },
+              { "caption": "Ja/Nein-Status", "value": "bool" },
+              { "caption": "Schalter", "value": "toggle" },
+              { "caption": "Auslöser (Skript)", "value": "action" },
+              { "caption": "Text", "value": "string" },
+              { "caption": "HTML", "value": "html" },
+              { "caption": "Gruppen-Überschrift", "value": "group" }
+            ]
+          }
+        }
+      ],
+      "values": []
+    },
+    {
+      "type": "Label",
+      "caption": "Für Systemsteuerung gedacht: HomeMatic-Systemvariablen, Device-Monitor-Status, FritzBox-Objekte (z.B. WLAN/Gastzugang-Schalter) als 'Schalter' oder 'Ja/Nein-Status', Netzwerkgeräte-Übersicht als 'HTML' (die bestehende HTML-Variable, die bereits nur aktive Geräte listet). 'Variable/Instanz' akzeptiert auch Link-Objekte. Anzeige-Text/Farbe bei 'Wert'/'Ja-Nein' kommen automatisch aus dem Variablenprofil. 'Auslöser' braucht nur das Skript-Feld, 'Gruppen-Überschrift' nur den Namen (z.B. 'FritzBox') und fügt eine Zwischenüberschrift über volle Breite ein. Reihenfolge der Kacheln per Drag am Zeilen-Anfasser in der Liste frei änderbar."
+    },
+    {
+      "type": "SelectInstance",
+      "name": "archive_instance",
+      "caption": "Archiv-Instanz (für Diagramme bei 'Wert')"
+    },
+    {
+      "type": "NumberSpinner",
+      "name": "update_interval",
+      "caption": "Aktualisierungsintervall (Sekunden)",
+      "minimum": 10,
+      "suffix": "s"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Button",
+      "caption": "Jetzt aktualisieren",
+      "onClick": "SYD_Refresh($id);"
+    }
+  ],
+  "status": [
+    { "code": 102, "icon": "active",   "caption": "Aktiv" },
+    { "code": 200, "icon": "error",    "caption": "Fehler – Details im IPS-Log" },
+    { "code": 201, "icon": "inactive", "caption": "Nicht konfiguriert – mindestens eine Kachel hinzufügen" }
+  ]
+}
