@@ -3,8 +3,8 @@
     "author": "Martin Wilkens",
     "name": "System Dashboard",
     "description": "Dashboard fuer die Systemsteuerung: buendelt HomeMatic-Systemvariablen, Device-Monitor-Status, aktive Netzwerkgeraete (ueber eine bestehende HTML-Variable) und FritzBox-Objekte als frei konfigurierbare, manuell sortierbare Liste schaltbarer und nicht schaltbarer Kacheln -- gleicher dunkler Kachel-Stil wie die anderen Dashboards.",
-    "version": "1.2",
-    "build": 3,
-    "date": 1795614373,
+    "version": "1.3",
+    "build": 4,
+    "date": 1795615580,
     "url": "https://github.com/mwilkens780/IPSymcon-SystemDashboard"
 }
